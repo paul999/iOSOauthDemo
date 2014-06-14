@@ -1,0 +1,464 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		403279121944D2F200FC612C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 403279111944D2F200FC612C /* main.m */; };
+		403279151944D2F200FC612C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 403279141944D2F200FC612C /* AppDelegate.m */; };
+		403279181944D2F200FC612C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 403279171944D2F200FC612C /* ViewController.m */; };
+		4032791B1944D2F200FC612C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 403279191944D2F200FC612C /* Main.storyboard */; };
+		4032791D1944D2F200FC612C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4032791C1944D2F200FC612C /* Images.xcassets */; };
+		403279291944D2F300FC612C /* Symfony_iOS_Oauth_DemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 403279281944D2F300FC612C /* Symfony_iOS_Oauth_DemoTests.m */; };
+		403279341944D40F00FC612C /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 403279321944D40F00FC612C /* Model.xcdatamodeld */; };
+		403279371944D52000FC612C /* Demo.m in Sources */ = {isa = PBXBuildFile; fileRef = 403279361944D52000FC612C /* Demo.m */; };
+		4032793A1945AE6800FC612C /* CoreDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 403279391945AE6800FC612C /* CoreDataTableViewController.m */; };
+		4032793D1945B07D00FC612C /* DemoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4032793C1945B07D00FC612C /* DemoTableViewController.m */; };
+		403279451945C47E00FC612C /* AppDelegate+radio.m in Sources */ = {isa = PBXBuildFile; fileRef = 403279441945C47E00FC612C /* AppDelegate+radio.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		403279231944D2F300FC612C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 403279041944D2F200FC612C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4032790B1944D2F200FC612C;
+			remoteInfo = "Symfony iOS Oauth Demo";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4032790C1944D2F200FC612C /* Symfony iOS Oauth Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Symfony iOS Oauth Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		403279101944D2F200FC612C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		403279111944D2F200FC612C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		403279131944D2F200FC612C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		403279141944D2F200FC612C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		403279161944D2F200FC612C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		403279171944D2F200FC612C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		4032791A1944D2F200FC612C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4032791C1944D2F200FC612C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		403279221944D2F300FC612C /* Symfony iOS Oauth DemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Symfony iOS Oauth DemoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		403279271944D2F300FC612C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		403279281944D2F300FC612C /* Symfony_iOS_Oauth_DemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Symfony_iOS_Oauth_DemoTests.m; sourceTree = "<group>"; };
+		403279331944D40F00FC612C /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		403279351944D52000FC612C /* Demo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Demo.h; sourceTree = "<group>"; };
+		403279361944D52000FC612C /* Demo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Demo.m; sourceTree = "<group>"; };
+		403279381945AE6800FC612C /* CoreDataTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataTableViewController.h; sourceTree = "<group>"; };
+		403279391945AE6800FC612C /* CoreDataTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataTableViewController.m; sourceTree = "<group>"; };
+		4032793B1945B07D00FC612C /* DemoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoTableViewController.h; sourceTree = "<group>"; };
+		4032793C1945B07D00FC612C /* DemoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoTableViewController.m; sourceTree = "<group>"; };
+		403279431945B4E500FC612C /* DatabaseRadio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabaseRadio.h; sourceTree = "<group>"; };
+		403279441945C47E00FC612C /* AppDelegate+radio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+radio.m"; sourceTree = "<group>"; };
+		403279461945C49E00FC612C /* AppDelegate+radio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+radio.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		403279091944D2F200FC612C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4032791F1944D2F300FC612C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		403279031944D2F200FC612C = {
+			isa = PBXGroup;
+			children = (
+				4032790E1944D2F200FC612C /* Symfony iOS Oauth Demo */,
+				403279251944D2F300FC612C /* Symfony iOS Oauth DemoTests */,
+				4032790D1944D2F200FC612C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4032790D1944D2F200FC612C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4032790C1944D2F200FC612C /* Symfony iOS Oauth Demo.app */,
+				403279221944D2F300FC612C /* Symfony iOS Oauth DemoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4032790E1944D2F200FC612C /* Symfony iOS Oauth Demo */ = {
+			isa = PBXGroup;
+			children = (
+				403279131944D2F200FC612C /* AppDelegate.h */,
+				4032793B1945B07D00FC612C /* DemoTableViewController.h */,
+				4032793C1945B07D00FC612C /* DemoTableViewController.m */,
+				403279141944D2F200FC612C /* AppDelegate.m */,
+				403279161944D2F200FC612C /* ViewController.h */,
+				403279171944D2F200FC612C /* ViewController.m */,
+				403279191944D2F200FC612C /* Main.storyboard */,
+				4032791C1944D2F200FC612C /* Images.xcassets */,
+				403279321944D40F00FC612C /* Model.xcdatamodeld */,
+				403279351944D52000FC612C /* Demo.h */,
+				403279361944D52000FC612C /* Demo.m */,
+				403279381945AE6800FC612C /* CoreDataTableViewController.h */,
+				403279391945AE6800FC612C /* CoreDataTableViewController.m */,
+				4032790F1944D2F200FC612C /* Supporting Files */,
+				403279431945B4E500FC612C /* DatabaseRadio.h */,
+				403279441945C47E00FC612C /* AppDelegate+radio.m */,
+				403279461945C49E00FC612C /* AppDelegate+radio.h */,
+			);
+			path = "Symfony iOS Oauth Demo";
+			sourceTree = "<group>";
+		};
+		4032790F1944D2F200FC612C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				403279101944D2F200FC612C /* Info.plist */,
+				403279111944D2F200FC612C /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		403279251944D2F300FC612C /* Symfony iOS Oauth DemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				403279281944D2F300FC612C /* Symfony_iOS_Oauth_DemoTests.m */,
+				403279261944D2F300FC612C /* Supporting Files */,
+			);
+			path = "Symfony iOS Oauth DemoTests";
+			sourceTree = "<group>";
+		};
+		403279261944D2F300FC612C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				403279271944D2F300FC612C /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4032790B1944D2F200FC612C /* Symfony iOS Oauth Demo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4032792C1944D2F300FC612C /* Build configuration list for PBXNativeTarget "Symfony iOS Oauth Demo" */;
+			buildPhases = (
+				403279081944D2F200FC612C /* Sources */,
+				403279091944D2F200FC612C /* Frameworks */,
+				4032790A1944D2F200FC612C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Symfony iOS Oauth Demo";
+			productName = "Symfony iOS Oauth Demo";
+			productReference = 4032790C1944D2F200FC612C /* Symfony iOS Oauth Demo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		403279211944D2F300FC612C /* Symfony iOS Oauth DemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4032792F1944D2F300FC612C /* Build configuration list for PBXNativeTarget "Symfony iOS Oauth DemoTests" */;
+			buildPhases = (
+				4032791E1944D2F300FC612C /* Sources */,
+				4032791F1944D2F300FC612C /* Frameworks */,
+				403279201944D2F300FC612C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				403279241944D2F300FC612C /* PBXTargetDependency */,
+			);
+			name = "Symfony iOS Oauth DemoTests";
+			productName = "Symfony iOS Oauth DemoTests";
+			productReference = 403279221944D2F300FC612C /* Symfony iOS Oauth DemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		403279041944D2F200FC612C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "Paul Sohier";
+				TargetAttributes = {
+					4032790B1944D2F200FC612C = {
+						CreatedOnToolsVersion = 6.0;
+					};
+					403279211944D2F300FC612C = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = 4032790B1944D2F200FC612C;
+					};
+				};
+			};
+			buildConfigurationList = 403279071944D2F200FC612C /* Build configuration list for PBXProject "Symfony iOS Oauth Demo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 403279031944D2F200FC612C;
+			productRefGroup = 4032790D1944D2F200FC612C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4032790B1944D2F200FC612C /* Symfony iOS Oauth Demo */,
+				403279211944D2F300FC612C /* Symfony iOS Oauth DemoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4032790A1944D2F200FC612C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4032791B1944D2F200FC612C /* Main.storyboard in Resources */,
+				4032791D1944D2F200FC612C /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		403279201944D2F300FC612C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		403279081944D2F200FC612C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				403279371944D52000FC612C /* Demo.m in Sources */,
+				403279181944D2F200FC612C /* ViewController.m in Sources */,
+				4032793A1945AE6800FC612C /* CoreDataTableViewController.m in Sources */,
+				403279151944D2F200FC612C /* AppDelegate.m in Sources */,
+				403279451945C47E00FC612C /* AppDelegate+radio.m in Sources */,
+				4032793D1945B07D00FC612C /* DemoTableViewController.m in Sources */,
+				403279121944D2F200FC612C /* main.m in Sources */,
+				403279341944D40F00FC612C /* Model.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4032791E1944D2F300FC612C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				403279291944D2F300FC612C /* Symfony_iOS_Oauth_DemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		403279241944D2F300FC612C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4032790B1944D2F200FC612C /* Symfony iOS Oauth Demo */;
+			targetProxy = 403279231944D2F300FC612C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		403279191944D2F200FC612C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4032791A1944D2F200FC612C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4032792A1944D2F300FC612C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				METAL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4032792B1944D2F300FC612C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				METAL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4032792D1944D2F300FC612C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = "Symfony iOS Oauth Demo/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		4032792E1944D2F300FC612C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = "Symfony iOS Oauth Demo/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		403279301944D2F300FC612C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Symfony iOS Oauth Demo.app/Symfony iOS Oauth Demo";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Symfony iOS Oauth DemoTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				METAL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Debug;
+		};
+		403279311944D2F300FC612C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Symfony iOS Oauth Demo.app/Symfony iOS Oauth Demo";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Symfony iOS Oauth DemoTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				METAL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		403279071944D2F200FC612C /* Build configuration list for PBXProject "Symfony iOS Oauth Demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4032792A1944D2F300FC612C /* Debug */,
+				4032792B1944D2F300FC612C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4032792C1944D2F300FC612C /* Build configuration list for PBXNativeTarget "Symfony iOS Oauth Demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4032792D1944D2F300FC612C /* Debug */,
+				4032792E1944D2F300FC612C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		4032792F1944D2F300FC612C /* Build configuration list for PBXNativeTarget "Symfony iOS Oauth DemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				403279301944D2F300FC612C /* Debug */,
+				403279311944D2F300FC612C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		403279321944D40F00FC612C /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				403279331944D40F00FC612C /* Model.xcdatamodel */,
+			);
+			currentVersion = 403279331944D40F00FC612C /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 403279041944D2F200FC612C /* Project object */;
+}
