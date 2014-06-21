@@ -18,6 +18,7 @@
 		4032793A1945AE6800FC612C /* CoreDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 403279391945AE6800FC612C /* CoreDataTableViewController.m */; };
 		4032793D1945B07D00FC612C /* DemoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4032793C1945B07D00FC612C /* DemoTableViewController.m */; };
 		403279451945C47E00FC612C /* AppDelegate+radio.m in Sources */ = {isa = PBXBuildFile; fileRef = 403279441945C47E00FC612C /* AppDelegate+radio.m */; };
+		40DA59CA1954807E007C7D1D /* Demo+Create.m in Sources */ = {isa = PBXBuildFile; fileRef = 40DA59C91954807E007C7D1D /* Demo+Create.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		403279431945B4E500FC612C /* DatabaseRadio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabaseRadio.h; sourceTree = "<group>"; };
 		403279441945C47E00FC612C /* AppDelegate+radio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+radio.m"; sourceTree = "<group>"; };
 		403279461945C49E00FC612C /* AppDelegate+radio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+radio.h"; sourceTree = "<group>"; };
+		40DA59C81954807E007C7D1D /* Demo+Create.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Demo+Create.h"; sourceTree = "<group>"; };
+		40DA59C91954807E007C7D1D /* Demo+Create.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Demo+Create.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +114,8 @@
 				403279431945B4E500FC612C /* DatabaseRadio.h */,
 				403279441945C47E00FC612C /* AppDelegate+radio.m */,
 				403279461945C49E00FC612C /* AppDelegate+radio.h */,
+				40DA59C81954807E007C7D1D /* Demo+Create.h */,
+				40DA59C91954807E007C7D1D /* Demo+Create.m */,
 			);
 			path = "Symfony iOS Oauth Demo";
 			sourceTree = "<group>";
@@ -244,6 +249,7 @@
 				403279181944D2F200FC612C /* ViewController.m in Sources */,
 				4032793A1945AE6800FC612C /* CoreDataTableViewController.m in Sources */,
 				403279151944D2F200FC612C /* AppDelegate.m in Sources */,
+				40DA59CA1954807E007C7D1D /* Demo+Create.m in Sources */,
 				403279451945C47E00FC612C /* AppDelegate+radio.m in Sources */,
 				4032793D1945B07D00FC612C /* DemoTableViewController.m in Sources */,
 				403279121944D2F200FC612C /* main.m in Sources */,
@@ -436,6 +442,7 @@
 				4032792E1944D2F300FC612C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4032792F1944D2F300FC612C /* Build configuration list for PBXNativeTarget "Symfony iOS Oauth DemoTests" */ = {
 			isa = XCConfigurationList;
@@ -444,6 +451,7 @@
 				403279311944D2F300FC612C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
