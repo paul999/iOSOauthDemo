@@ -10,6 +10,24 @@
 
 @implementation Demo (Create)
 
++ (Demo *)findDemo:(NSNumber *)serverId
+inManagedObjectContext:(NSManagedObjectContext *)context
+{
+    Demo *demo = nil;
+    
+    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Demo"];
+    request.predicate = [NSPredicate predicateWithFormat:@"serverId = %@", serverId];
+    
+    NSError *erro;
+    NSArray *matches = [context executeFetchRequest:request error:&erro];
+    
+    if (matches)
+    {
+        demo = [matches firstObject];
+    }
+    
+    return demo;
+}
 
 + (Demo *)createDemo:(NSString *)title
                 desc:(NSString *)desc
@@ -19,20 +37,13 @@ inManagedObjectContext:(NSManagedObjectContext *)context
     Demo *demo = nil;
     if ([title length] && [desc length])
     {
-        NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Demo"];
-        request.predicate = [NSPredicate predicateWithFormat:@"serverId = %@", serverId];
+        demo = [self findDemo:serverId inManagedObjectContext:context];
         
-        NSError *erro;
-        NSArray *matches = [context executeFetchRequest:request error:&erro];
-        
-        if (!matches || [matches count] == 0)
+        if (demo == nil)
         {
             demo = [NSEntityDescription insertNewObjectForEntityForName:@"Demo" inManagedObjectContext:context];
         }
-        else
-        {
-            demo = [matches firstObject];
-        }
+        
         demo.title = title;
         demo.desc = desc;
         demo.serverId = serverId;
@@ -42,6 +53,14 @@ inManagedObjectContext:(NSManagedObjectContext *)context
         NSLog((@"Missing title or desc."));
     }
     return demo;
+}
+
++ (void)deleteDemo:(NSNumber *)serverId
+inManagedObjectContext:(NSManagedObjectContext *)context
+{
+    Demo *demo = [self findDemo:serverId inManagedObjectContext:context];
+    
+    [context deleteObject:demo];
 }
 
 @end

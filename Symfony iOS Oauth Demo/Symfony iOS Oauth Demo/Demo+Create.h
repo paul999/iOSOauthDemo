@@ -15,4 +15,8 @@
                 desc:(NSString *)desc
             serverId:(NSNumber *)serverId
 inManagedObjectContext:(NSManagedObjectContext *)context;
+
+
++ (void)deleteDemo:(NSNumber *)serverId
+inManagedObjectContext:(NSManagedObjectContext *)context;
 @end

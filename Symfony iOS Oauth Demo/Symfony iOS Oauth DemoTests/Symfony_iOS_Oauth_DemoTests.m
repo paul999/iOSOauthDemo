@@ -46,13 +46,22 @@
 - (Demo *)getDemo:(NSNumber *)serverId
           context:(NSManagedObjectContext *)context
 {
+    return [self getDemo:serverId testReturn:YES context:context];
+}
+- (Demo *)getDemo:(NSNumber*)serverId
+       testReturn:(BOOL)testReturn
+          context:(NSManagedObjectContext *)context
+{
     NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Demo"];
     request.predicate = [NSPredicate predicateWithFormat:@"serverId = %@", serverId];
     
     NSError *erro;
     NSArray *matches = [context executeFetchRequest:request error:&erro];
     
-    XCTAssertTrue([matches count] == 1);
+    if (testReturn)
+    {
+        XCTAssertTrue([matches count] == 1);
+    }
     
     return [matches firstObject];
 }
@@ -89,6 +98,24 @@
     XCTAssertTrue([desc isEqualToString:dm2.desc]);
     XCTAssertEqual(serverID.intValue, dm2.serverId.intValue);
 }
+
+- (void)testDemoDelete
+{
+    NSString *title = @"title";
+    NSString *desc = @"desc";
+    NSNumber *serverID = [NSNumber numberWithInt:arc4random()];
+    
+    Demo *demo = [Demo createDemo:title desc:desc serverId:serverID inManagedObjectContext:self.context];
+    
+    demo = [self getDemo:serverID context:self.context];
+    
+    [Demo deleteDemo:serverID inManagedObjectContext:self.context];
+    
+    demo = [self getDemo:serverID testReturn:NO context:self.context];
+    
+    XCTAssertTrue(demo == nil);
+}
+
 /*
 - (void)testPerformanceExample {
     // This is an example of a performance test case.
