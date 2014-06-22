@@ -18,6 +18,7 @@
 		4032793A1945AE6800FC612C /* CoreDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 403279391945AE6800FC612C /* CoreDataTableViewController.m */; };
 		4032793D1945B07D00FC612C /* DemoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4032793C1945B07D00FC612C /* DemoTableViewController.m */; };
 		403279451945C47E00FC612C /* AppDelegate+radio.m in Sources */ = {isa = PBXBuildFile; fileRef = 403279441945C47E00FC612C /* AppDelegate+radio.m */; };
+		4092B87B19560ACA001A8AA3 /* CreateDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4092B87A19560ACA001A8AA3 /* CreateDemoViewController.m */; };
 		40DA59CA1954807E007C7D1D /* Demo+Create.m in Sources */ = {isa = PBXBuildFile; fileRef = 40DA59C91954807E007C7D1D /* Demo+Create.m */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +55,8 @@
 		403279431945B4E500FC612C /* DatabaseRadio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabaseRadio.h; sourceTree = "<group>"; };
 		403279441945C47E00FC612C /* AppDelegate+radio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+radio.m"; sourceTree = "<group>"; };
 		403279461945C49E00FC612C /* AppDelegate+radio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+radio.h"; sourceTree = "<group>"; };
+		4092B87919560ACA001A8AA3 /* CreateDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateDemoViewController.h; sourceTree = "<group>"; };
+		4092B87A19560ACA001A8AA3 /* CreateDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateDemoViewController.m; sourceTree = "<group>"; };
 		40DA59C81954807E007C7D1D /* Demo+Create.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Demo+Create.h"; sourceTree = "<group>"; };
 		40DA59C91954807E007C7D1D /* Demo+Create.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Demo+Create.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -104,6 +107,8 @@
 				403279161944D2F200FC612C /* ViewController.h */,
 				403279171944D2F200FC612C /* ViewController.m */,
 				403279191944D2F200FC612C /* Main.storyboard */,
+				4092B87919560ACA001A8AA3 /* CreateDemoViewController.h */,
+				4092B87A19560ACA001A8AA3 /* CreateDemoViewController.m */,
 				4032791C1944D2F200FC612C /* Images.xcassets */,
 				403279321944D40F00FC612C /* Model.xcdatamodeld */,
 				403279351944D52000FC612C /* Demo.h */,
@@ -248,6 +253,7 @@
 				403279371944D52000FC612C /* Demo.m in Sources */,
 				403279181944D2F200FC612C /* ViewController.m in Sources */,
 				4032793A1945AE6800FC612C /* CoreDataTableViewController.m in Sources */,
+				4092B87B19560ACA001A8AA3 /* CreateDemoViewController.m in Sources */,
 				403279151944D2F200FC612C /* AppDelegate.m in Sources */,
 				40DA59CA1954807E007C7D1D /* Demo+Create.m in Sources */,
 				403279451945C47E00FC612C /* AppDelegate+radio.m in Sources */,

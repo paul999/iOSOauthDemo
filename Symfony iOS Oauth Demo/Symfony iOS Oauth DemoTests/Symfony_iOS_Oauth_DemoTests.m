@@ -76,8 +76,6 @@
     XCTAssertTrue([title isEqualToString:demo.title]);
     XCTAssertTrue([desc isEqualToString:demo.desc]);
     
-    XCTAssertEqual(title, demo.title);
-    XCTAssertEqual(desc, demo.desc);
     XCTAssertEqual(serverID.intValue, demo.serverId.intValue);
     
     Demo *dm = [self getDemo:serverID context:self.context];

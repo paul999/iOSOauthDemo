@@ -9,6 +9,8 @@
 #import "DemoTableViewController.h"
 #import "DatabaseRadio.h"
 #import "Demo.h"
+#import "CreateDemoViewController.h"
+#import "Demo+Create.h"
 
 @interface DemoTableViewController ()
 
@@ -57,6 +59,23 @@
     cell.detailTextLabel.text = demo.desc;
     
     return cell;
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"create-new-demo"])
+    {
+        CreateDemoViewController *vw = (CreateDemoViewController *) segue.destinationViewController;
+        vw.managedObjectContext = self.managedObjectContext;
+    }
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSLog(@"Delete");
+    Demo *demo = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    NSNumber *serverId = demo.serverId;
+    [Demo deleteDemo:serverId inManagedObjectContext: self.managedObjectContext];
 }
 
 @end

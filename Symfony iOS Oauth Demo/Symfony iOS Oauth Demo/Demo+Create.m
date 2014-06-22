@@ -47,6 +47,18 @@ inManagedObjectContext:(NSManagedObjectContext *)context
         demo.title = title;
         demo.desc = desc;
         demo.serverId = serverId;
+        
+        NSError *err;
+        
+        [context save:&err];
+        
+        if (err)
+        {
+            NSLog(@"Err %@ %@", err.localizedDescription, err.description);
+        }
+        else{
+            NSLog(@"Saved fine");
+        }
     }
     else
     {

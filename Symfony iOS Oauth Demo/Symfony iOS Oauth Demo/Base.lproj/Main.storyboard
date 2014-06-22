@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6154.17" systemVersion="14A238x" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="j31-dx-YMb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6154.21" systemVersion="14A261i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="j31-dx-YMb">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6153.11"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6153.13"/>
     </dependencies>
     <scenes>
         <!--Demo Table View Controller-->
         <scene sceneID="p92-DA-QBH">
             <objects>
                 <tableViewController id="dmD-fb-wF8" customClass="DemoTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="MpD-4W-B3T">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="MpD-4W-B3T">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -53,10 +53,10 @@
             </objects>
             <point key="canvasLocation" x="1125" y="413"/>
         </scene>
-        <!--View Controller-->
+        <!--Create Demo View Controller-->
         <scene sceneID="dCs-nh-TCj">
             <objects>
-                <viewController id="UoW-IZ-XaH" sceneMemberID="viewController">
+                <viewController id="UoW-IZ-XaH" customClass="CreateDemoViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="4pc-j3-mro"/>
                         <viewControllerLayoutGuide type="bottom" id="k84-pg-gxk"/>
@@ -90,32 +90,45 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q7J-Gz-pYv">
-                                <rect key="frame" x="15" y="146" width="445" height="30"/>
-                                <state key="normal" title="Save">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gE8-pv-LAb">
+                                <rect key="frame" x="15" y="151" width="445" height="30"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Save">
+                                            <attributes>
+                                                <font key="NSFont" size="15" name="HelveticaNeue-Bold"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
                                 </state>
+                                <connections>
+                                    <action selector="createDemo:" destination="UoW-IZ-XaH" eventType="touchUpInside" id="00J-Hm-flX"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="fj1-Nb-rfQ" firstAttribute="leading" secondItem="zq3-pN-P3N" secondAttribute="trailing" constant="8" symbolic="YES" id="1Az-gC-mUi"/>
                             <constraint firstItem="gd7-a0-zwb" firstAttribute="leading" secondItem="flk-7H-IBh" secondAttribute="trailing" constant="8" symbolic="YES" id="8uc-OT-iEw"/>
+                            <constraint firstItem="gE8-pv-LAb" firstAttribute="trailing" secondItem="gd7-a0-zwb" secondAttribute="trailing" id="FfK-vq-UKN"/>
                             <constraint firstItem="zq3-pN-P3N" firstAttribute="leading" secondItem="X2F-l5-qcK" secondAttribute="leading" constant="20" symbolic="YES" id="JqX-nO-dDL"/>
                             <constraint firstAttribute="trailing" secondItem="fj1-Nb-rfQ" secondAttribute="trailing" constant="20" symbolic="YES" id="Jr2-q8-fVI"/>
-                            <constraint firstItem="Q7J-Gz-pYv" firstAttribute="top" secondItem="flk-7H-IBh" secondAttribute="bottom" constant="8" symbolic="YES" id="LZF-cx-req"/>
                             <constraint firstItem="gd7-a0-zwb" firstAttribute="trailing" secondItem="fj1-Nb-rfQ" secondAttribute="trailing" id="MLp-8k-dEk"/>
+                            <constraint firstItem="gE8-pv-LAb" firstAttribute="leading" secondItem="X2F-l5-qcK" secondAttribute="leading" constant="15" id="Nnl-kH-RYr"/>
                             <constraint firstItem="flk-7H-IBh" firstAttribute="leading" secondItem="zq3-pN-P3N" secondAttribute="leading" id="Uv4-0P-PQW"/>
+                            <constraint firstItem="gE8-pv-LAb" firstAttribute="top" secondItem="flk-7H-IBh" secondAttribute="bottom" constant="13" id="ZZt-xP-Hgx"/>
                             <constraint firstItem="fj1-Nb-rfQ" firstAttribute="top" secondItem="4pc-j3-mro" secondAttribute="bottom" constant="11" id="dJx-dB-mCY"/>
-                            <constraint firstItem="Q7J-Gz-pYv" firstAttribute="leading" secondItem="X2F-l5-qcK" secondAttribute="leading" constant="15" id="fms-TR-4S4"/>
                             <constraint firstItem="gd7-a0-zwb" firstAttribute="top" secondItem="fj1-Nb-rfQ" secondAttribute="bottom" constant="8" symbolic="YES" id="kIn-oR-4vk"/>
                             <constraint firstItem="gd7-a0-zwb" firstAttribute="leading" secondItem="fj1-Nb-rfQ" secondAttribute="leading" id="mHf-cX-2wa"/>
+                            <constraint firstItem="flk-7H-IBh" firstAttribute="top" secondItem="zq3-pN-P3N" secondAttribute="bottom" constant="17" id="o4k-UP-DdH"/>
                             <constraint firstItem="zq3-pN-P3N" firstAttribute="top" secondItem="4pc-j3-mro" secondAttribute="bottom" constant="15" id="rib-2i-eQ7"/>
-                            <constraint firstItem="Q7J-Gz-pYv" firstAttribute="trailing" secondItem="gd7-a0-zwb" secondAttribute="trailing" id="s6e-Bi-HHt"/>
-                            <constraint firstItem="Q7J-Gz-pYv" firstAttribute="top" secondItem="gd7-a0-zwb" secondAttribute="bottom" constant="3" id="yJp-xs-Rhb"/>
                         </constraints>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
+                    <connections>
+                        <outlet property="demotitle" destination="fj1-Nb-rfQ" id="Fcb-TS-bN1"/>
+                        <outlet property="description" destination="gd7-a0-zwb" id="r3p-O6-XsX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="njh-Ck-wgy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
