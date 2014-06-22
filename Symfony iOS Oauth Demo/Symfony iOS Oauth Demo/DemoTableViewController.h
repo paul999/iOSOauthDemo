@@ -7,8 +7,10 @@
 //
 
 #import "CoreDataTableViewController.h"
+#import "NXOauth2.h"
 
 @interface DemoTableViewController : CoreDataTableViewController
 
 @property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
+@property (nonatomic, strong) NXOAuth2Account *account;
 @end

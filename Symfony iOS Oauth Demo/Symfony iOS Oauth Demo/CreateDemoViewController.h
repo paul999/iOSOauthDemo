@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NXOauth2.h"
 
 @interface CreateDemoViewController : UIViewController
 @property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
+@property (nonatomic, strong) NXOAuth2Account *account;
 @end

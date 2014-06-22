@@ -41,13 +41,16 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="d8d-MK-aoZ">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Lch-7H-jVV">
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" systemItem="add" id="Lch-7H-jVV">
                             <connections>
                                 <segue destination="UoW-IZ-XaH" kind="show" identifier="create-new-demo" id="9r2-uG-yPV"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <size key="freeformSize" width="480" height="480"/>
+                    <connections>
+                        <outlet property="addButton" destination="Lch-7H-jVV" id="A6G-vb-PZA"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hCH-el-73B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

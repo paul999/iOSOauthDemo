@@ -10,13 +10,43 @@
 #import "AppDelegate+radio.h"
 #import "DatabaseRadio.h"
 
+#import "NXOauth2.h"
+
 @interface AppDelegate ()
       @property (strong, nonatomic) NSManagedObjectContext *DatabaseContext;
 
 @end
 
 @implementation AppDelegate
-            
+
++ (void)initialize;
+{
+    [[NXOAuth2AccountStore sharedStore] setClientID:@"6_5xqk9omvc7wg48gs8wc88wck0k8ggs44gso0404w4gcsc0088"
+                                             secret:@"2dw92x1w4u4g8g0o8wkkokook0co84g40kcg84g4wc0ok0okw8"
+                                   authorizationURL:[NSURL URLWithString:@"http://ip-6.nl/app_dev.php/oauth/v2/auth"]
+                                           tokenURL:[NSURL URLWithString:@"http://ip-6.nl/app_dev.php/oauth/v2/token"]
+                                        redirectURL:[NSURL URLWithString:@"siod://ios.local"]
+                                     forAccountType:@"oauthDemoService"];
+    
+    NSLog(@"Init done.");
+}
+
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url;
+{
+    NSLog(@"Handling");
+    
+    BOOL handled = [[NXOAuth2AccountStore sharedStore] handleRedirectURL:url];
+    
+    if (!handled) {
+        NSLog(@"The URL (%@) could not be handled. Maybe you want to do something with it.", url);
+    }
+    else
+    {
+        NSLog(@"Handled");
+    }
+    
+    return handled;
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.

@@ -19,6 +19,8 @@
 		4032793D1945B07D00FC612C /* DemoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4032793C1945B07D00FC612C /* DemoTableViewController.m */; };
 		403279451945C47E00FC612C /* AppDelegate+radio.m in Sources */ = {isa = PBXBuildFile; fileRef = 403279441945C47E00FC612C /* AppDelegate+radio.m */; };
 		4092B87B19560ACA001A8AA3 /* CreateDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4092B87A19560ACA001A8AA3 /* CreateDemoViewController.m */; };
+		4092B8891956DF44001A8AA3 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4092B8881956DF44001A8AA3 /* Security.framework */; };
+		4092B88B1956E13B001A8AA3 /* libOAuth2Client.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4092B8841956DE7F001A8AA3 /* libOAuth2Client.a */; };
 		40DA59CA1954807E007C7D1D /* Demo+Create.m in Sources */ = {isa = PBXBuildFile; fileRef = 40DA59C91954807E007C7D1D /* Demo+Create.m */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +31,27 @@
 			proxyType = 1;
 			remoteGlobalIDString = 4032790B1944D2F200FC612C;
 			remoteInfo = "Symfony iOS Oauth Demo";
+		};
+		4092B8811956DE7F001A8AA3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4092B87C1956DE7E001A8AA3 /* OAuth2Client.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 942FFCD612315E0A00E6C65E;
+			remoteInfo = OAuth2Client.framework;
+		};
+		4092B8831956DE7F001A8AA3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4092B87C1956DE7E001A8AA3 /* OAuth2Client.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D;
+			remoteInfo = OAuth2Client;
+		};
+		4092B8851956DEBC001A8AA3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4092B87C1956DE7E001A8AA3 /* OAuth2Client.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D;
+			remoteInfo = OAuth2Client;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -57,6 +80,8 @@
 		403279461945C49E00FC612C /* AppDelegate+radio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+radio.h"; sourceTree = "<group>"; };
 		4092B87919560ACA001A8AA3 /* CreateDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateDemoViewController.h; sourceTree = "<group>"; };
 		4092B87A19560ACA001A8AA3 /* CreateDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateDemoViewController.m; sourceTree = "<group>"; };
+		4092B87C1956DE7E001A8AA3 /* OAuth2Client.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OAuth2Client.xcodeproj; path = OAuth2Client/OAuth2Client.xcodeproj; sourceTree = "<group>"; };
+		4092B8881956DF44001A8AA3 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		40DA59C81954807E007C7D1D /* Demo+Create.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Demo+Create.h"; sourceTree = "<group>"; };
 		40DA59C91954807E007C7D1D /* Demo+Create.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Demo+Create.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -66,6 +91,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4092B88B1956E13B001A8AA3 /* libOAuth2Client.a in Frameworks */,
+				4092B8891956DF44001A8AA3 /* Security.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,9 +109,11 @@
 		403279031944D2F200FC612C = {
 			isa = PBXGroup;
 			children = (
+				4092B8881956DF44001A8AA3 /* Security.framework */,
 				4032790E1944D2F200FC612C /* Symfony iOS Oauth Demo */,
 				403279251944D2F300FC612C /* Symfony iOS Oauth DemoTests */,
 				4032790D1944D2F200FC612C /* Products */,
+				4092B87C1956DE7E001A8AA3 /* OAuth2Client.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,9 +130,9 @@
 			isa = PBXGroup;
 			children = (
 				403279131944D2F200FC612C /* AppDelegate.h */,
+				403279141944D2F200FC612C /* AppDelegate.m */,
 				4032793B1945B07D00FC612C /* DemoTableViewController.h */,
 				4032793C1945B07D00FC612C /* DemoTableViewController.m */,
-				403279141944D2F200FC612C /* AppDelegate.m */,
 				403279161944D2F200FC612C /* ViewController.h */,
 				403279171944D2F200FC612C /* ViewController.m */,
 				403279191944D2F200FC612C /* Main.storyboard */,
@@ -151,6 +180,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		4092B87D1956DE7E001A8AA3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4092B8821956DE7F001A8AA3 /* OAuth2Client.framework */,
+				4092B8841956DE7F001A8AA3 /* libOAuth2Client.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -165,6 +203,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				4092B8861956DEBC001A8AA3 /* PBXTargetDependency */,
 			);
 			name = "Symfony iOS Oauth Demo";
 			productName = "Symfony iOS Oauth Demo";
@@ -218,6 +257,12 @@
 			mainGroup = 403279031944D2F200FC612C;
 			productRefGroup = 4032790D1944D2F200FC612C /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 4092B87D1956DE7E001A8AA3 /* Products */;
+					ProjectRef = 4092B87C1956DE7E001A8AA3 /* OAuth2Client.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				4032790B1944D2F200FC612C /* Symfony iOS Oauth Demo */,
@@ -225,6 +270,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		4092B8821956DE7F001A8AA3 /* OAuth2Client.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = OAuth2Client.framework;
+			remoteRef = 4092B8811956DE7F001A8AA3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4092B8841956DE7F001A8AA3 /* libOAuth2Client.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libOAuth2Client.a;
+			remoteRef = 4092B8831956DE7F001A8AA3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		4032790A1944D2F200FC612C /* Resources */ = {
@@ -278,6 +340,11 @@
 			isa = PBXTargetDependency;
 			target = 4032790B1944D2F200FC612C /* Symfony iOS Oauth Demo */;
 			targetProxy = 403279231944D2F300FC612C /* PBXContainerItemProxy */;
+		};
+		4092B8861956DEBC001A8AA3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = OAuth2Client;
+			targetProxy = 4092B8851956DEBC001A8AA3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -376,9 +443,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Applications/Xcode6-Beta2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include",
+					"$(SRCROOT)/Oauth2Client/**",
+					"$(SRCROOT)/SVProgressHUD/**",
+				);
 				INFOPLIST_FILE = "Symfony iOS Oauth Demo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -387,9 +462,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Applications/Xcode6-Beta2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include",
+					"$(SRCROOT)/Oauth2Client/**",
+					"$(SRCROOT)/SVProgressHUD/**",
+				);
 				INFOPLIST_FILE = "Symfony iOS Oauth Demo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "C3ABFAF3-4778-487E-AE0F-EA3F5EC24499";
 			};
 			name = Release;
 		};
