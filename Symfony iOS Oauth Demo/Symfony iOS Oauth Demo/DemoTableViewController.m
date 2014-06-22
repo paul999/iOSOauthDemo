@@ -34,6 +34,8 @@
 
 - (void)viewDidAppear:(BOOL)animated
 {
+    [super viewDidAppear:animated];
+    
     for (NXOAuth2Account *acc in [[NXOAuth2AccountStore sharedStore] accountsWithAccountType:@"oauthDemoService"]) {
         self.account = acc;
         NSLog(@"Found a account");
