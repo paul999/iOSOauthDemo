@@ -46,6 +46,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="GFX-sd-lkH">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </refreshControl>
                     <connections>
                         <outlet property="addButton" destination="Lch-7H-jVV" id="A6G-vb-PZA"/>
                     </connections>
@@ -128,6 +131,7 @@
                     <connections>
                         <outlet property="demodesc" destination="gd7-a0-zwb" id="D5X-dW-Pth"/>
                         <outlet property="demotitle" destination="fj1-Nb-rfQ" id="Ujz-fs-ty3"/>
+                        <outlet property="save" destination="gE8-pv-LAb" id="YF5-XS-BDs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="njh-Ck-wgy" userLabel="First Responder" sceneMemberID="firstResponder"/>

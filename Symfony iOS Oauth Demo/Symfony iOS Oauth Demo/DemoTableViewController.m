@@ -11,6 +11,7 @@
 #import "Demo.h"
 #import "CreateDemoViewController.h"
 #import "Demo+Create.h"
+#import "AppDelegate.h"
 
 
 #import "NXOauth2.h"
@@ -31,6 +32,10 @@
                                                       self.managedObjectContext = note.userInfo[DatabaseAvailabilityContext];
                                                   }];
 }
+- (void)viewDidLoad
+{
+    [self.refreshControl addTarget:self action:@selector(refreshView:) forControlEvents:UIControlEventValueChanged];
+}
 
 - (void)viewDidAppear:(BOOL)animated
 {
@@ -40,6 +45,8 @@
         self.account = acc;
         NSLog(@"Found a account");
         //[[NXOAuth2AccountStore sharedStore] removeAccount:acc];
+        
+        
         break;
     };
 
@@ -73,6 +80,9 @@
                                                           // Do something with the error
                                                           NSLog(@"Received ERR: %@", error.localizedDescription);
                                                       }];
+        
+        
+        
     }
 }
 
@@ -86,6 +96,9 @@
 - (void)setAccount:(NXOAuth2Account *)account
 {
     _account = account;
+    
+    AppDelegate* app = ((AppDelegate *)[UIApplication sharedApplication].delegate);
+    app.account = account;
     
     [self updateUI];
 }
@@ -109,6 +122,9 @@
                                                                                        cacheName:nil];
         
         self.addButton.enabled = YES;
+        
+        [self.refreshControl beginRefreshing];
+        [Demo getDataFromClient:self.account inManagedObjectContent:self.managedObjectContext refresh:self.refreshControl completionHandler:NULL];
     }
 }
 
@@ -140,6 +156,15 @@
     Demo *demo = [self.fetchedResultsController objectAtIndexPath:indexPath];
     NSNumber *serverId = demo.serverId;
     [Demo deleteDemo:serverId inManagedObjectContext: self.managedObjectContext];
+}
+- (void)refreshView:(UIRefreshControl *)refresh
+{
+    NSLog(@"Refresh");
+    
+    if (self.account && self.managedObjectContext)
+    {
+        [Demo getDataFromClient:self.account inManagedObjectContent:self.managedObjectContext refresh:self.refreshControl completionHandler:NULL];
+    }
 }
 
 @end

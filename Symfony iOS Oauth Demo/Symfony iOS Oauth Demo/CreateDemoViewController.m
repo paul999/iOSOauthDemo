@@ -9,10 +9,12 @@
 #import "CreateDemoViewController.h"
 #import "Demo+Create.h"
 #import <QuartzCore/QuartzCore.h>
+#import <NXOAuth2.h>
 
-@interface CreateDemoViewController ()
+@interface CreateDemoViewController () <NXOAuth2ConnectionDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *demotitle;
 @property (weak, nonatomic) IBOutlet UITextField *demodesc;
+@property (weak, nonatomic) IBOutlet UIButton *save;
 
 @end
 
@@ -30,7 +32,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.save.enabled = true;
 }
 
 - (void)didReceiveMemoryWarning
@@ -53,7 +55,6 @@
     
     NSString *title = self.demotitle.text;
     NSString *desc = self.demodesc.text;
-    NSNumber *serverId = [NSNumber numberWithInt:arc4random()];
     
     if ([title length] == 0 || [desc length] == 0)
     {
@@ -83,11 +84,8 @@
     }
     else
     {
-        [Demo createDemo:title desc:desc serverId:serverId inManagedObjectContext:self.managedObjectContext];
-        
-        NSLog(@"Created demo with serverId %@", serverId);
-        
-        [self.navigationController popViewControllerAnimated:YES];
+        self.save.enabled = FALSE;
+        [self createDemoOnServer:title desc:desc];
     }
 }
 
@@ -95,6 +93,70 @@
 {
     _managedObjectContext = managedObjectContext;
     NSLog(@"Got a managed context");
+}
+
+- (void)createDemoOnServer:(NSString *)title
+                      desc:(NSString *)desc
+{
+    NSMutableDictionary *dt = [[NSMutableDictionary alloc]init];
+    [dt setValue:title forKey:@"title"];
+    [dt setValue:desc forKey:@"description"];
+    
+    NSData *jsonData;
+    
+    if ([NSJSONSerialization isValidJSONObject:dt]) {
+        
+        NSError *error;
+        jsonData = [NSJSONSerialization dataWithJSONObject:dt options:NSJSONWritingPrettyPrinted error:&error];
+        
+        if (error != nil)
+        {
+            NSLog(@"Error creating JSON data: %@", error);
+            return;
+        }
+    }
+    else
+    {
+        return;
+    }
+    
+    NSString *jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+    NSLog(@"%@", jsonString);  // To verify the jsonString.
+    
+    
+    NXOAuth2Request *theRequest = [[NXOAuth2Request alloc] initWithResource:[NSURL URLWithString:@"http://api.ip-6.nl/demos"]
+                                                                     method:@"POST"
+                                                                 parameters:nil];
+    theRequest.account = self.account;
+    
+    NSMutableURLRequest *sigendRequest = [[theRequest signedURLRequest] mutableCopy];
+    
+    [sigendRequest setHTTPMethod:@"POST"];
+    [sigendRequest setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+    [sigendRequest setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    [sigendRequest setValue:[NSString stringWithFormat:@"%lu", (unsigned long)[jsonData length]] forHTTPHeaderField:@"Content-Length"];
+    [sigendRequest setHTTPBody:jsonData];
+    
+    
+    NXOAuth2Connection *connection = [[NXOAuth2Connection alloc] initWithRequest:sigendRequest
+                                                               requestParameters:nil
+                                                                     oauthClient:self.account.oauthClient
+                                                          sendingProgressHandler:nil
+                                                                 responseHandler:^(NSURLResponse *response, NSData *responseData, NSError *error){
+                                                                     NSLog(@"Done creating :) %@", error);
+                                                                     
+                                                                     [Demo getDataFromClient:self.account inManagedObjectContent:self.managedObjectContext refresh: nil completionHandler:NULL];
+                                                                     self.save.enabled = true;
+                                                                     
+                                                                     if (error)
+                                                                     {
+                                                                         // Might do something here?
+                                                                         NSLog(@"ERR");
+                                                                     }
+                                                                     
+                                                                     [self.navigationController popViewControllerAnimated:YES];
+                                                                 }];
+    connection.delegate = self;
 }
 
 /*

@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "AppDelegate+radio.h"
 #import "DatabaseRadio.h"
+#import "Demo+Create.h"
 
 #import "NXOauth2.h"
 
@@ -53,7 +54,29 @@
     
     self.DatabaseContext = [self createMainQueueManagedObjectContext];
     
+    [application setMinimumBackgroundFetchInterval:UIApplicationBackgroundFetchIntervalMinimum];
+    
+    
     return YES;
+}
+
+-(void)application:(UIApplication *)application performFetchWithCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler{
+    NSDate *fetchStart = [NSDate date];
+    NSLog(@"Background fetch");
+    
+    if (!self.account || !self.DatabaseContext)
+    {
+        completionHandler(UIBackgroundFetchResultFailed);
+    }
+    
+    [Demo getDataFromClient:self.account inManagedObjectContent:self.DatabaseContext refresh:nil completionHandler:^(UIBackgroundFetchResult result) {
+        completionHandler(result);
+        
+        NSDate *fetchEnd = [NSDate date];
+        NSTimeInterval timeElapsed = [fetchEnd timeIntervalSinceDate:fetchStart];
+        NSLog(@"Background Fetch Duration: %f seconds", timeElapsed);
+    }];
+   
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

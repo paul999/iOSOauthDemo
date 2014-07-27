@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Symfony iOS Oauth Demo/Demo+Create.m"
-            timestampString = "425060204.708221"
+            timestampString = "428167633.043695"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
+            startingLineNumber = "116"
+            endingLineNumber = "116"
             landmarkName = "+createDemo:desc:serverId:inManagedObjectContext:"
             landmarkType = "5">
          </BreakpointContent>
@@ -64,6 +64,54 @@
             startingLineNumber = "69"
             endingLineNumber = "69"
             landmarkName = "-testDemoCreate"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Symfony iOS Oauth Demo/Demo+Create.m"
+            timestampString = "428167248.553124"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "+getDataFromClient:inManagedObjectContent:refresh:completionHandler:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Symfony iOS Oauth Demo/Demo+Create.m"
+            timestampString = "428167633.043695"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "148"
+            endingLineNumber = "148"
+            landmarkName = "+deleteDemo:inManagedObjectContext:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Symfony iOS Oauth Demo/Demo+Create.m"
+            timestampString = "428167633.043695"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "+getDataFromClient:inManagedObjectContent:refresh:completionHandler:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

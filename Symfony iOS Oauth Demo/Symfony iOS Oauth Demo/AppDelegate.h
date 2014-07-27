@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <NXOAuth2.h>
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-
+@property (nonatomic, strong) NXOAuth2Account *account;
 
 @end
 

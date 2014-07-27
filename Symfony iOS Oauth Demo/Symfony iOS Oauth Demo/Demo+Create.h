@@ -8,9 +8,18 @@
 
 #import <Foundation/Foundation.h>
 #import "demo.h"
+#import <UIKit/UIKit.h>
+#import <NXOAuth2.h>
 
 
 @interface Demo (Create)
+
++ (void)getDataFromClient:(NXOAuth2Account *)account
+   inManagedObjectContent:(NSManagedObjectContext *)context
+                  refresh:(UIRefreshControl *)refresh
+        completionHandler:(void (^)(UIBackgroundFetchResult))completionHandler;
+
+
 + (Demo *)createDemo:(NSString *)title
                 desc:(NSString *)desc
             serverId:(NSNumber *)serverId
