@@ -11,8 +11,8 @@
 #import <QuartzCore/QuartzCore.h>
 
 @interface CreateDemoViewController ()
-@property (weak, nonatomic) IBOutlet UITextField *description;
 @property (weak, nonatomic) IBOutlet UITextField *demotitle;
+@property (weak, nonatomic) IBOutlet UITextField *demodesc;
 
 @end
 
@@ -44,15 +44,15 @@
     self.demotitle.layer.borderColor=[[UIColor clearColor]CGColor];
     self.demotitle.layer.cornerRadius = 0;
     
-    self.description.layer.borderColor=[[UIColor clearColor]CGColor];
-    self.description.layer.cornerRadius = 0;
+    self.demodesc.layer.borderColor=[[UIColor clearColor]CGColor];
+    self.demodesc.layer.cornerRadius = 0;
 }
 
 - (IBAction)createDemo:(id)sender {
     NSLog(@"Saving...");
     
     NSString *title = self.demotitle.text;
-    NSString *desc = self.description.text;
+    NSString *desc = self.demodesc.text;
     NSNumber *serverId = [NSNumber numberWithInt:arc4random()];
     
     if ([title length] == 0 || [desc length] == 0)
@@ -68,9 +68,9 @@
         }
         if ([desc length] == 0)
         {
-            self.description.layer.cornerRadius=8.0f;
-            self.description.layer.borderColor=[[UIColor redColor]CGColor];
-            self.description.layer.borderWidth= 1.0f;
+            self.demodesc.layer.cornerRadius=8.0f;
+            self.demodesc.layer.borderColor=[[UIColor redColor]CGColor];
+            self.demodesc.layer.borderWidth= 1.0f;
             
             NSLog(@"Missing desc");
         }
